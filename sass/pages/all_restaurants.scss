@@ -1,0 +1,382 @@
+@use "../utils/gradient.scss";
+@use "../utils/colors.scss";
+@use "../utils/animation.scss";
+@use "../layout/footer.scss";
+@use "../layout/header.scss";
+@use "../utils/boxe-shadow.scss";
+
+
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.BG{
+    width: 100%;
+    
+    
+  
+    img{
+        width: 100%;
+        z-index: 1;
+
+    }
+}
+
+
+img {
+   
+    position: relative;
+
+}
+body{
+    background-color: #f6f6f6;
+}
+header{
+    position: relative;
+    .arrow {
+        position: absolute;
+        left: 25px;
+        top: 40%;
+        font-size: 22px;
+        color: #000;
+    }
+}
+.header_restaurants {
+    box-shadow: none;
+}
+
+
+
+
+footer {
+    background-color: colors.$darkgrey;
+    margin: 0;
+    width: 100%;
+    height: 155px;
+    .footer_size{
+        padding-left: 25px;
+        padding-top: 15px;
+        color: white;
+        & h3{
+            font-family: 'Shrikhand';
+            padding-bottom: 10px;     
+        }
+        & ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 6px;
+            & li{
+                display: flex;
+                column-gap: 8px;
+                width: fit-content;
+                
+            }
+        }
+    }
+
+}
+
+a { 
+   color: white;
+}
+        
+          
+
+
+@media screen and (min-width:992px){
+    .menu_size{ 
+        border-radius: 50px 50px 0 0;
+        background-color: colors.$lightgrey;
+        position: relative;
+        bottom: 180px;
+        height: 177px;
+        z-index: 1000;
+        .menu_header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:90%;
+            height: 80px;
+            margin: auto;
+            border: 0px solid red;
+            padding: 1rem;
+            & h2{
+                font-family: 'Shrikhand';
+                font-size: 28px;
+            }
+            .card_like_btn{
+                width: 32px;
+                height: 32px;
+                position: relative;
+                :hover>.fa-solid{
+                    opacity: 1;                    
+                }
+                & i{
+                    font-size: 32px;
+                    bottom:0;
+                    position: absolute;                      
+                }
+                .fa-solid{
+                    color: transparent;
+                    @include gradient.gradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: ease-in-out;
+                    transition-duration: .5s;
+                    cursor: pointer;
+                }
+                .fa-solid:hover {
+                    opacity: 1;
+                    
+                    
+                }
+            }      
+        }   
+    }
+    .menu_list {
+        display: flex;
+        margin: 16px;
+        column-gap: 10px;
+        border: 0px solid red;
+        justify-content: space-between;
+        margin-top: -170px;
+        .menu_list_size {
+            display:flex;
+            flex-direction: column;
+            border: 0px solid blue;
+            width: 31%;
+            .underline {
+                width: 45px;
+                height: 4px;
+                background-color: #99e2d0;
+                margin-top: 8px;
+            }
+            .menu_category {    
+                border: 0px solid rgb(34, 255, 0);
+                height: fit-content;
+                width: 100%;     
+                .menu_widget {
+                    display: flex;
+                    border: 0px solid blue; 
+                    background-color: white;                  
+                    border-radius: 16px;
+                    overflow: hidden;
+                    margin-top: 25px;
+                    @include boxe-shadow;
+                    animation: appearance 1s;
+                    @for $i from 1 through 4 {
+                        &:nth-child(#{$i}) {
+                          animation-delay:  100ms * $i;
+                        }
+                      }   
+                    cursor: pointer;
+                    .menu_description {
+                        border: 0px solid yellow;
+                        width: fit-content; 
+                        padding: 16px; 
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        .course_name {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        .course_caption {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
+                    .meal_price {
+                        margin-left: auto;
+                        font-weight: 900;
+                        padding: 16px;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                    .menu_checkmark {
+                        background-color: colors.$tertiary;
+                        margin-right: -45px;
+                        transition: margin-right 0.5s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 45px;
+                        .checkmark_icon {
+                            height: 25px;
+                            width: 25px;
+                            background-color: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 100px;
+                            transition: 1s;
+                            color: #99e2d0;
+                            transform: rotate(180deg);
+
+                        }    
+                    }
+                    &:hover .menu_checkmark {
+                        margin-right: 0;
+                    }
+                    &:hover .checkmark_icon {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+
+        }
+    
+        
+    }
+}
+
+@media screen and (max-width:992px) {
+    .menu_size{ 
+        border-radius: 40px 40px 0 0;
+        background-color: colors.$lightgrey;
+        position: relative;
+        bottom: 60px;
+        height: 100px;
+        z-index: 1000;
+        .menu_header{
+            display: flex;
+            justify-content: space-between;
+            width:90%;
+            height: 80px;
+            margin: auto;
+            border: 0px solid red;
+            padding: 1rem;
+            & h2{
+                font-family: 'Shrikhand';
+                font-size: 28px;
+            }
+            .card_like_btn{
+                width: 32px;
+                height: 32px;
+                position: relative;
+                :hover>.fa-solid{
+                    opacity: 1;                    
+                }
+                & i{
+                    font-size: 26px;
+                    bottom:0;
+                    position: absolute;                      
+                }
+                .fa-solid{
+                    color: transparent;
+                    @include gradient.gradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: ease-in-out;
+                    transition-duration: .5s;
+                    cursor: pointer;
+                }
+                .fa-solid:hover {
+                    opacity: 1;
+                    
+                    
+                }
+            }      
+        }   
+    }
+    .menu_list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin: 16px;
+        margin-top: -50px;
+        .menu_list_size {
+            margin-bottom: 20px;
+        }
+        & h3 {
+            border: 0px solid black;
+        }
+        .underline {
+            width: 45px;
+            height: 4px;
+            background-color: #99e2d0;
+            margin-top: 8px;
+        }
+        .menu_category {
+            background-color: #FFFF;
+            border: 0px solid black;
+            height: fit-content;
+            .menu_widget {
+                display: flex;
+                border: 0px solid blue;                   
+                border-radius: 16px;
+                overflow: hidden;
+                @include boxe-shadow;
+                margin-top: 15px;
+                animation: appearance 1s;
+                    @for $i from 1 through 4 {
+                        &:nth-child(#{$i}) {
+                          animation-delay:  100ms * $i;
+                        }
+                      }  
+                .menu_description {
+                    border: 0px solid yellow;
+                    width: fit-content; 
+                    padding: 16px; 
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    .course_name {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    .course_caption {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+                .meal_price {
+                    margin-left: auto;
+                    font-weight: 900;
+                    padding: 16px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                .menu_checkmark {
+                    background-color: colors.$tertiary;
+                    margin-right: -45px;
+                    transition: margin-right 0.5s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 45px;
+                    .checkmark_icon {
+                        height: 25px;
+                        width: 25px;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100px;
+                        transition: 1s;
+                        color: #99e2d0;
+                        transform: rotate(180deg);
+
+                    }    
+                }
+                &:hover .menu_checkmark {
+                    margin-right: 0;
+                }
+                &:hover .checkmark_icon {
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+}
+

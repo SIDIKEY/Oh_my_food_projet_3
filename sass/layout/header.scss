@@ -1,0 +1,17 @@
+@use"../utils/boxe-shadow.scss";
+
+header {
+    font-family: 'shrikhand';
+    @include boxe-shadow.boxe-shadow;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 2;
+    & h1{
+        font-family: 'Shrikhand';
+    }
+
+}

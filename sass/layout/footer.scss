@@ -20,8 +20,9 @@ footer {
             row-gap: 6px;
             & li{
                 display: flex;
-                .footer_link{
-                    text-decoration: none;                   
+                & a{
+                    text-decoration: none;
+                    color: white;
                 }
                 & p{
                     position: absolute;

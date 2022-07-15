@@ -12,6 +12,11 @@ body {
   text-align: center;
 }
 
+.email {
+  color: #fff;
+  text-decoration: none;
+}
+
 header {
   font-family: "shrikhand";
   box-shadow: 2px 1px 8px -3px #000000;
@@ -523,7 +528,7 @@ header h1 {
 }
 
 a:-webkit-any-link {
-  color: -webkit-link;
+  color: white;
   cursor: pointer;
   text-decoration: none;
 }

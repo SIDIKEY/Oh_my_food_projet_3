@@ -17,3 +17,8 @@ body{
     color: #fff;
     text-decoration: none;
 }
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}

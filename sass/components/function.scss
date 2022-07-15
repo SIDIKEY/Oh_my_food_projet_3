@@ -6,7 +6,7 @@
     & h2 {
         margin-left: 15px;
     }
-    @media screen and (max-width:800px){
+    @media screen and (max-width:980px){
     .function_widgets{
         width: 100%;
         display: flex;
@@ -62,7 +62,7 @@
 } 
 }
 
-@media screen and (min-width:801px){
+@media screen and (min-width:990px){
     .function{
         padding-top: 30px;
         padding-bottom: 50px;
@@ -120,7 +120,7 @@
             .f_widget_text{
                 width: fit-content;              
                 & p{
-                    -webkit-user-select: none;
+                    user-select: none;
                
                     font-weight: 500;
                     font-size: 15px;                  

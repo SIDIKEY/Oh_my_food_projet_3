@@ -201,6 +201,8 @@ header h1 {
     background-color: transparent;
   }
   .function .function_widgets .f_widget_text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
   .function .function_widgets .f_widget_text p {
@@ -265,8 +267,11 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 45px;
-    column-gap: 35px;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
     padding-top: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 100%;
     margin: auto;
@@ -286,7 +291,8 @@ a {
     border: 0 solid transparent;
     border-radius: 16px 16px 0 0;
     box-shadow: none;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .restaurants .cards .card .card_caption {
     background-color: #99E2D0;
@@ -370,7 +376,8 @@ a {
     border: 0 solid transparent;
     border-radius: 16px 16px 0 0;
     box-shadow: none;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .restaurants .restaurants_size .cards .card .card_caption {
     background-color: #99E2D0;
@@ -413,6 +420,16 @@ a {
     opacity: 1;
   }
 }
+@-webkit-keyframes appearance {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes appearance {
   0% {
     transform: scale(0);
@@ -425,41 +442,33 @@ a {
 }
 @-webkit-keyframes slide-left {
   0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-80px);
     transform: translateX(-80px);
   }
 }
 @keyframes slide-left {
   0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-80px);
     transform: translateX(-80px);
   }
 }
 @-webkit-keyframes rotate-center {
   0% {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
 }
 @keyframes rotate-center {
   0% {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
 }
@@ -583,7 +592,10 @@ footer .footer_size ul {
 }
 footer .footer_size ul li {
   display: flex;
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -643,7 +655,8 @@ a {
   .menu_list {
     display: flex;
     margin: 16px;
-    column-gap: 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     border: 0px solid red;
     justify-content: space-between;
     margin-top: -170px;
@@ -662,6 +675,8 @@ a {
   }
   .menu_list .menu_list_size .menu_category {
     border: 0px solid rgb(34, 255, 0);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 100%;
   }
@@ -673,23 +688,30 @@ a {
     overflow: hidden;
     margin-top: 25px;
     box-shadow: 2px 1px 8px -3px #000000;
-    animation: appearance 1s;
+    -webkit-animation: appearance 1s;
+            animation: appearance 1s;
     cursor: pointer;
   }
   .menu_list .menu_list_size .menu_category .menu_widget:nth-child(1) {
-    animation-delay: 100ms;
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
   }
   .menu_list .menu_list_size .menu_category .menu_widget:nth-child(2) {
-    animation-delay: 200ms;
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
   }
   .menu_list .menu_list_size .menu_category .menu_widget:nth-child(3) {
-    animation-delay: 300ms;
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
   }
   .menu_list .menu_list_size .menu_category .menu_widget:nth-child(4) {
-    animation-delay: 400ms;
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
   }
   .menu_list .menu_list_size .menu_category .menu_widget .menu_description {
     border: 0px solid yellow;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 16px;
     white-space: nowrap;
@@ -811,6 +833,8 @@ a {
   .menu_list .menu_category {
     background-color: white;
     border: 0px solid black;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   .menu_list .menu_category .menu_widget {
@@ -820,22 +844,29 @@ a {
     overflow: hidden;
     box-shadow: 2px 1px 8px -3px #000000;
     margin-top: 15px;
-    animation: appearance 1s;
+    -webkit-animation: appearance 1s;
+            animation: appearance 1s;
   }
   .menu_list .menu_category .menu_widget:nth-child(1) {
-    animation-delay: 100ms;
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
   }
   .menu_list .menu_category .menu_widget:nth-child(2) {
-    animation-delay: 200ms;
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
   }
   .menu_list .menu_category .menu_widget:nth-child(3) {
-    animation-delay: 300ms;
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
   }
   .menu_list .menu_category .menu_widget:nth-child(4) {
-    animation-delay: 400ms;
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
   }
   .menu_list .menu_category .menu_widget .menu_description {
     border: 0px solid yellow;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 16px;
     white-space: nowrap;
@@ -898,10 +929,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation-name: loading-end;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-name: loading-end;
+          animation-name: loading-end;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 .loader .loader_icon {
   border: 10px solid transparent;
@@ -967,6 +1002,4 @@ a {
 .order_menu button:hover {
   transform: scale(1.02);
   opacity: 0.9;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
